@@ -14,19 +14,19 @@ pipeline {
         
         stage('Install Dependencies') {
             steps {
-                sh 'sudo npm install' // No need for 'sudo' here
+                sh 'npm install' // No need for 'sudo' here
                 
                 // Install the Nx CLI globally
-                sh 'sudo npm install -g nx'
+                sh 'npm install -g nx'
             }
         }
         
         stage('Build') {
             steps {
                 // Use 'npx' to run Nx commands without the need to install packages globally
-                sh 'sudo npx nx build org-setup'
-                sh 'sudo npx nx deploy org-setup'
-                sh 'sudo npx nx run org-setup:serve:production'
+                sh 'npx nx build org-setup'
+                sh 'npx nx deploy org-setup'
+                sh 'npx nx run org-setup:serve:production'
             }
         }
     }    
