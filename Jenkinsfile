@@ -17,7 +17,7 @@ pipeline {
                 sh 'npm install' // No need for 'sudo' here
                 
                 // Install the Nx CLI globally
-                sh 'npm install -g nx'
+              //  sh 'npm install -g nx'
             }
         }
         
