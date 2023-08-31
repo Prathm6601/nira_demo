@@ -22,6 +22,7 @@ pipeline {
         
         stage('Build') {
             steps {
+                sh 'npm install --global nx@latest'
                 sh 'npx nx build org-setup' 
                 sh 'npx nx deploy org-setup'
                 sh  'npx nx run org-setup:serve:production'
