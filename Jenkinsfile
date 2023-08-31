@@ -23,7 +23,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'sudo npx nx build org-setup' 
-                sh 'sudo npx nx deploy org-setup --verbose'
+                sh 'sudo npx nx deploy org-setup'
                 sh 'sudo npx nx run org-setup:serve:production'
             }
         }
