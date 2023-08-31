@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@nira/org-setup-lib": ["libs/org-setup/org-setup/src/index.ts"],
+      "@nira/shared": ["libs/shared/src/index.ts"],
+      "@nira/types-lib": ["libs/types/src/index.ts"],
+      "@nira/types-libs": ["libs/shared/types/src/index.ts"],
+      "@nira/utils": ["libs/utils/src/index.ts"],
+      "@nira/utils-lib": ["libs/api/utils/src/index.ts"],
+      "@org/constant-lib": ["libs/api/constant/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
