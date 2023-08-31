@@ -27,7 +27,7 @@ pipeline {
                 sh  'npx nx run org-setup:serve:production'
             }
         }
-
+    }    
     post {
         always {
             cleanWs() // Clean workspace to remove any residual files
