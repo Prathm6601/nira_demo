@@ -1,9 +1,5 @@
 pipeline {
     agent any
-     docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
     environment {
         NODE_ENV = 'production'
     }
@@ -25,10 +21,10 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'sudo npm install --global nx@latest'
+                sh 'sudo npm instll --global nx@latest'
                 sh 'npx nx build org-setup' 
                 sh 'npx nx deploy org-setup'
-                sh  'npx nx run org-setup:serve:production'
+                sh 'npx nx run org-setup:serve:production'
             }
         }
     }    
