@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clone the GitLab repository
-                git branch: 'main', credentialsId: 'your-gitlab-credentials', url: 'https://gitlab.com/your-username/your-repo.git'
+                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/Prathm6601/nira_demo.git'
             }
         }
         
@@ -22,9 +22,9 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh ‘npx nx build org-setup’ 
-                sh ‘sudo npx nx deploy org-setup’
-                sh  ‘sudo npx nx run org-setup:serve:production’
+                sh 'npx nx build org-setup' 
+                sh 'npx nx deploy org-setup'
+                sh  'npx nx run org-setup:serve:production'
             }
         }
 
