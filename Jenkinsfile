@@ -15,6 +15,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
+                sh 'npx create-nx-workspace'
+                sh 'npx nx@latest init'
                 sh 'sudo npm install --global nx@latest'
 
             }
